@@ -108,5 +108,129 @@ let apples1 = 5;
 let bags2 = 2;
 let reminder = bags2 % apples1;
 console.log(reminder);
-export {};
 // // // //  ANS = 2  
+// ASSIGNMENT OPERATORS
+// EXAMPLE
+let m8 = 5;
+console.log(m8);
+// // ANS = 5
+m8 += 5;
+console.log(m8);
+// // ANS = 10
+m8 -= 5;
+console.log(m8);
+// // ANS = 5
+let c = 10;
+c += 5;
+console.log(c);
+// ANS =15   (equivalent to c = c + 5, is now 15.)
+let numb = 2;
+numb += 4; // 6   numb = numb+4
+console.log(numb);
+// ANS = 6
+let numb1 = 2;
+numb += 2; // 6   numb = numb+2
+console.log(numb1);
+// ANS = 4
+let numb2 = 2;
+numb2 -= 2;
+console.log(numb2);
+// // ANS = 0
+let numb3 = 8;
+numb1 -= 5;
+console.log(numb3);
+// ANS = 3
+// UNARARY OPERATORS
+// EXAMPLE
+let num = 5;
+++num;
+--num;
+++num;
+--num;
+++num;
+--num;
+++num;
+--num;
+console.log(num);
+// ANS = 6
+let numbers1 = 5;
+++numbers1;
+--numbers1;
+--numbers1;
+--numbers1;
+--numbers1;
+--numbers1;
+--numbers1;
+--numbers1;
+console.log(numbers1);
+// // ANS = -1
+let numberss = 5;
+--numberss;
+++numberss;
+--numberss;
+++numberss;
+--numberss;
+++numberss;
+--numberss;
+console.log(numberss);
+// // ANS = 4;
+let i1 = 10;
+//             11 + 12  + 6 + 11 - 2
+let resullt = ++i1 + ++i1 + 6 + --i1 - 2;
+console.log(resullt);
+// ANS = 38
+// COMPRASION OPERATORS
+// EXAMPLE
+let m9 = 5;
+console.log(m9 == 5);
+// ANS = TRUE
+console.log(m9 === 5);
+// ANS = TRUE
+console.log(m9 != 5);
+// ANS = FALSE
+console.log(m9 > 8);
+// ANS = FALSE
+console.log(m9 < 8);
+// ANS = TRUE
+console.log(m9 >= 8);
+// ANS = FALSE
+console.log(m9 <= 8);
+// ANS = TRUE
+let a = 5;
+let b = 2;
+let isEqual = (a == b);
+// ANS = FALSE
+let isNotEqual = (a != b);
+//  ANS = TRUE
+let isGreaterThan = !(a > b);
+// ANS  = TRUE
+let isLessThan = !(a < b);
+//  ANS = FALSE
+let $num = 5;
+let $num1 = 5;
+console.log($num != $num1);
+// ANS = FALSE
+// LOGICAL OPERATORS
+// EXAMPLE
+let m7 = 5;
+console.log(m7 >= 5 && m7 < 10);
+// ANS = TRUE
+console.log(m7 > 5 && m7 < 10);
+// ANS = FALSE
+console.log(m7 >= 5 || m7 < 10);
+// ANS = TRUE
+console.log(m7 > 5 || m7 < 10);
+// ANS = TRUE
+console.log(!(m7 < 10));
+// ANS = FALSE
+console.log(!(m7 > 10));
+// ANS = TRUE
+let a1 = 5;
+let b1 = 2;
+console.log((a1 > 0) && (b1 > 0));
+// ANS = TRUE
+console.log((a1 > 0) || (b1 > 0));
+//  ANS = TRUE
+console.log(!(a1 > 0));
+export {};
+// ANS  = FALSE
