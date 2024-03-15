@@ -1,4 +1,9 @@
+import inquirer from "inquirer";
 import { AsyncLocalStorage } from "async_hooks";
+import { futimes } from "fs";
+import { title } from "process";
+
+import PromptSync from  "prompt-sync";
 
 // OPERATORS
 // ARITHMETIC OPERATORS
@@ -264,3 +269,178 @@ console.log((a1 > 0) || (b1 > 0));
 //  ANS = TRUE
 console.log(!(a1 > 0));
 // ANS  = FALSE
+
+// LOGICAL STATEMENT
+// IF , ELSE SATAEMENT
+// EXAMPLE
+
+
+const prompt =  PromptSync();
+let z1 = prompt("Where does the people live?");
+let correctAnswer = "Pakistan";
+if(z1 == correctAnswer){
+    console.log("correct");
+}
+// // ANS = correct
+
+const name1 =prompt("what is your name");
+console.log("Hello ! " + name1);
+// ANS = Hello ! .....
+
+
+let z3 = prompt("Where does the people live?");
+let correctAnswer1 = "Pakistan";
+if(z3 = correctAnswer1){
+    console.log("correct");
+}else{
+    console.log("Wrong");
+}
+// ANS = correct
+
+let isRaining  = true;
+if (isRaining) {
+    console.log("Wear a raincoat.");
+} else {
+    console.log("Wear sunglasses.");
+}
+// ANS = Wear a raincoat.
+
+let isRaining1  = false;
+if (isRaining1) {
+    console.log("Wear a raincoat.");
+} else {
+    console.log("Wear sunglasses.");
+}
+// ANS = Wear sunglasses.
+
+// SELF---CHECK QUIZ
+let answer : string = "corrcet";
+if(answer === "correct"){
+console.log("you got it right");
+} else {
+    console.log("sorry! that's not correct");
+}
+//  ANS =sorry! that's not correct
+
+// FRIEND CHEACKER GAME
+// EXAMPLE
+let isFriend : string = "Ameen";
+if(isFriend === "Ameen" || isFriend === "Daniyal") {
+    console.log(`${isFriend} is your friend`);
+} else {
+    console.log(`${isFriend} is not your friend`);
+}
+//  ANS  = Ameen is your friend.
+
+let isFriend1 : string = "Humza";
+if(isFriend1 === "Ameen" || isFriend1 === "Daniyal") {
+    console.log(`${isFriend1} is your friend`);
+} else {
+    console.log(`${isFriend1} is not your friend`);
+}
+//  ANS =   Hamza is not your friend.
+
+let isFriends = await inquirer.prompt  ([{
+    name : "name",
+    type : "string",
+    messeage : "enter your friend name: "
+}]);
+if(isFriends === "Ameen" || isFriends === "Daniyal") {
+     console.log("MR Daniyal is your friend");
+} else {
+       console.log("Ameen is not your friend");
+}
+// ANS = MR Daniyal/ Ameen is /not friend
+
+// ELSE-IF EXAMPLE
+
+let  weather = "cloudy";
+if (weather === "raining") {
+    console.log("wear a raincoat");
+} else if (weather === "cloudy") {
+    console.log("wear a light  jacket");
+} else {
+    console.log("wear a sunglassess");
+}
+//  ANS = WAER A LIGHT JACKET.
+
+// EVALUATING A NUMBER GEME
+// EXAMPLE
+let guess : number = 7;
+let target : number = 5;
+if ( guess < target) {
+    console.log("your guess is too low!");
+} else if (guess > target) {
+    console.log("your guess is too high!");
+} else {
+    console.log("your guessed correctly!")
+}
+// ANS = your guess is too high!
+
+// ROCK PAPER SCISSORS GAME.
+// EXAMPLE
+ let player1 : string = "Rock";
+ let player2 : string = "Scissors";
+ if (player1 === player2) {
+  console.log("it a tie!");
+ } else if ((player1 === "Rock" && player2 === "Scissors") || (player1 === "Scissors" && player2 === "paper") || (player1 === "paper" && player2 === "rock")) {
+  console.log("player 1 win!");
+ } else {
+  console.log("player 2 wins!");
+ }
+// //   ANS = player 1 win!
+
+const input =  PromptSync();
+let name = input("Where does the people live?");
+// let correctAnswer = "Pakistan";
+if(name == "japan"){
+    console.log("incorrect!");
+ }else if(name == "Pakistan"){
+     console.log("close!");
+ }else{
+    console.error("Wrong!!");
+ }
+// ANS = wrong!!
+
+// IF STATEMENT NESTED
+// EXAMPLE
+// TICKETING SYSTEM
+let country = "Pakistan";
+let age = 10;
+if (country === "pakistan"){
+    if (age >= 18){
+        console.log("Here is your ticket");
+    } else {
+        console.log("age restriction");
+    }
+} else {
+    console.log("invalid country");
+}
+// ANS = invalid country
+
+// CONDITIONAL TERNARY OPERATORS
+// EXAMPLE
+let isHungry = true;
+let snack = isHungry ? "apple" : "water";
+console.log(`you should have some ${snack},`);
+//  ANS = YOU SHOULD HAVE SOME APPLLE.
+
+let isHungry1 = false;
+let snack1 = isHungry1 ? "apple" : "water";
+console.log(`you should have some ${snack1},`);
+//  ANS = YOU SHOULD HAVE SOME WATER.
+
+// SWITCH STATEMENTS
+// EXAMPLE
+let dayOff = "sunday";
+switch (dayOff) {
+  case "saturday":
+  console.log("Go hiking");
+  break;
+  case "sunday":
+    console.log("Read a book");
+    break;
+    default :
+    console.log("work on a hobby");
+}
+// ANS = Read a book.
