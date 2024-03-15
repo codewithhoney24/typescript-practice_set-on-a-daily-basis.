@@ -444,3 +444,147 @@ switch (dayOff) {
     console.log("work on a hobby");
 }
 // ANS = Read a book.
+
+
+// BASIC FUNCTION
+// EXAMPLE
+function halfFryEgg() {
+    let cocked = 1 + 1.5 + 2;
+            //egg + butter +salt
+    console.log(cocked);
+}
+ halfFryEgg()
+//  i invoking the function
+//  ANS = 4.5
+
+// RETURN FUNCTION VALUE
+// EXAMPLE
+
+function halfFryEggs() {
+        let cocked = 1 + 1.5 + 2;
+             //egg + butter +salt
+        return cocked
+     }
+    // i invoking the function
+    let response: number =  halfFryEggs()
+    console.log (response)
+// ANS = 4.5
+
+// PARAMETER AND ARGUMENTS.
+// EXAMPLE
+ function halfFrryEggs(egg: number, butter: number, salt: number) : number {
+    return egg + butter + salt;
+ }
+ let response1: number =  halfFrryEggs(1,1.5,2)
+     console.log (response1)
+// //  ANS =4.5
+
+function addNumbers(a: number, b: number) : number {
+       return a + b;
+      }
+    let responses: number =  addNumbers(5,3)
+    // invoking the function
+        console.log (responses);
+// //  ANS = 8
+
+    function calculationArea(width: number, height: number) : number {
+        return width * height;
+       }
+       let response2: number =  calculationArea(100,50)
+       //     // invoking the function
+       console.log (response2);
+// //  ANS = 5000
+
+// DEFAULT PARAMETERS
+// if you foget an ingredient you have a backup
+// EXAMPLE
+function hallfFryEgg(
+    egg: number = 1, butter: number = 1.5, salt: number = 2
+) : number {
+      return egg + butter + salt;
+}
+let response3: number =  hallfFryEgg()
+    console.log (response3)
+// OR
+// ANS = 4.5
+
+function haalfFryEgg(
+        egg: number = 1, butter: number = 1.5, salt: number = 2
+    ) : number {
+          return egg + butter + salt;
+    }
+    let response4: number =  haalfFryEgg(1,1.5,3)
+        console.log (response4)
+//     //   ANS = 5.5
+
+// REST PARAMETERS
+// accepting an unknown number of ongredients
+// EXAMPLE
+function halfFryyEgg( egg: number = 1,...ingredients: number[]) {
+    console.log(egg);
+    console.log(ingredients);
+}
+halfFryyEgg(1,1.5,2,5)
+// ANS = 1
+// ANS =[1.5,2,5]
+
+// SPREAD OPERATORS
+// like spreading out ingredients on the counter
+function halfFryEgg1( egg: number = 1,...ingredients: number[]) {
+    console.log(egg);
+    console.log(...ingredients);
+}
+halfFryEgg1(1,1.5,2,5)
+//  ANS = 1
+//  ANS = 1.5  2  5
+
+// WHAT HAPPENS IF I CALL FUNCATION TWICE??
+// ARROW FUNCTION
+// shorthand way of writing a recipe
+// EXAMPLE
+let halfFryEgg2 = () => 1 + 1.5 + 3;
+                //  egg + butter + salt
+let responsse : number = halfFryEgg2();
+console.log(responsse)
+//  ANS = 5.5
+
+let halfryEgg = (egg: number, butter: number, salt: number):number =>(
+                  egg + butter + salt
+)
+let responnse : number = halfryEgg(1,1.5,2);
+console.log(responnse)
+//  ANS = 4.5
+
+let halffryEgg = () => {return 1 + 1.5 + 3};
+    // egg + butter + salt
+let reesponse : number = halffryEgg();
+console.log(reesponse)
+//  ANS = 5.5
+
+let halfFryegg = () => {
+// egg + butter + salt
+let cocked = 1 + 1.5 + 3;
+return cocked
+};
+let respponse : number = halfFryegg();
+console.log(respponse)
+//  ANS =5.5
+
+let halfFryEggg = (egg: number, butter: number, salt: number):number =>{
+    let cocked = egg + butter + salt;
+    return cocked
+}
+     let $response : number = halfFryEggg(1,1.5,2);
+     console.log($response)
+//  ANS = 4.5
+
+let sum1 = (x: number, y: number): number => {
+  return x + y;
+}
+// // ANS =....
+
+sum1(10, 20);
+let sum2 = (x: number, y: number): number => x+y;
+sum2(3,4);
+// ANS =.......
+
