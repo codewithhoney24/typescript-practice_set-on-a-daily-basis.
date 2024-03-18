@@ -525,3 +525,25 @@ sum1(10, 20);
 let sum2 = (x, y) => x + y;
 sum2(3, 4);
 // ANS =.......
+// VARIABLE SCOPE
+// the current context of code which determines the accessibilityof variable to javascript
+// GOLABAL VARIABLES
+// ingredients variable in your entirekitchen
+// LOCAL VARIABLE
+// ingredients used within a recipe
+// let globalVar = " Accessable everywher";
+//  let localVar  = "Accessable only in side the function";
+// function showExample() {
+//        console.log(globalVar);
+//     // work
+// }
+// console.log(localVar);
+// ANS = ERROR: localvar is not defined
+// SIMPLE VARIABLE SCOPE
+// EXAMPLE
+let globalVar = " Accessible everywher";
+function showExample() {
+    // work
+}
+console.log(globalVar);
+// // ANS = Accessible everywhere.
